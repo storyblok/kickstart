@@ -1,15 +1,11 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid"> 
     <ul class="nav navbar-nav">
-      <li class="active">
-        <a href="#">Home</a>
-      </li>
+      {% for header_link in global.content.header_links %}
       <li>
-        <a href="#">Link</a>
-      </li> 
-      <li>
-        <a href="#">Link</a>
+        <a href="{{ header_link.link|url }}">{{ header_link.display_name }}</a>
       </li>
+      {% endfor %}
     </ul>
   </div>
 </nav>

@@ -17,6 +17,9 @@
   <!-- Sets the story with the slug 'global' to the variable global: -->
   {% set global from story id:'global' %}
 
+  <!-- Include the global navigation bar -->
+  {% include 'navbar' %}
+
   <main id="main" role="main">
     <!-- Here we include the root component -->
     {% include story.content.component with blok: story.content, title: story.name, date: story.created_at %}

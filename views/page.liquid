@@ -14,13 +14,12 @@
   <link rel="preload" id="stylesheet" href="{{ 'assets/css/below.css' | asset_url }}" as="style" onload="this.rel='stylesheet'">
 </head>
 <body>
+  <!-- Sets the story with the slug 'global' to the variable global: -->
+  {% set global from story id:'global' %}
 
   <main id="main" role="main">
     <!-- Here we include the root component -->
     {% include story.content.component with blok: story.content, title: story.name, date: story.created_at %}
-
-    <!-- REMOVE the following line when you are done with the quickstart -->
-    {% include 'quickstart' %}
   </main>
 
   <script type="text/javascript" src="{{ 'assets/js/scripts.js' | asset_url }}"></script>

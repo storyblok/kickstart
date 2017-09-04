@@ -1,6 +1,6 @@
 {{ blok._editable }}
-<!-- Default Bootstrap Column HTML -->
-<div class="col-md-6">
+<!-- Default Boostrap Column HTML -->
+<div class="{{blok.width|default:'col-md-6'}}">
   <!-- Loop through all the components contained in the body field -->
   {% for blok in blok.body %}
     <!-- include all components according to their name -->

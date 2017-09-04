@@ -1,0 +1,11 @@
+{{ blok._editable }}
+<!-- Default Bootstrap Grid HTML -->
+<div class="container">
+  <div class="row">
+    <!-- Loop through all the components contained in the columns field -->
+    {% for blok in blok.columns %}
+      <!-- include all components according to their name -->
+      {% include blok.component with blok: blok %}
+    {% endfor %}
+  </div>
+</div>
